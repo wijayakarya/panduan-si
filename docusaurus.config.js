@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Panduan S.I.',
   tagline: 'Dokumentasi pekerjaan di Sistem Informasi',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/wika_logo_square.png',
 
   // Set the production url of your site here
   url: 'https://wijayakarya.github.io',
@@ -79,8 +79,8 @@ const config = {
       navbar: {
         title: 'panduan',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Wika Logo',
+          src: 'img/wika_logo.svg',
         },
         items: [
           {
@@ -146,11 +146,27 @@ const config = {
             ],
           },
         ],
+        logo: {
+          alt: 'Wika Logo',
+          src: 'img/wika_logo.svg',
+          href: 'https://www.wika.co.id',
+          width: 95.5351,
+          height: 64.7589,
+        },
         copyright: `Copyright © ${new Date().getFullYear()} Sistem Informasi. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      announcementBar: {
+        id: 'pemberitahuan', // Any value that will identify this message.
+        content:
+          'Situs ini masih dalam masa pengembangan (<em>development</em>).',
+          // 'Kunjungi <a target="_blank" rel="noopener noreferrer" href="https://repo.wika.co.id/wijaya-karya/docusaurus/juklak">GitLab</a> kami.',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true, // Whether this announcement can be dismissed with a '×' button
       },
     }),
 };
