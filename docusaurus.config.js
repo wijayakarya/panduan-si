@@ -6,23 +6,24 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Panduan S.I.',
+  tagline: 'Dokumentasi pekerjaan di Sistem Informasi',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://wijayakarya.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/panduan-si/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'wijayakarya', // Usually your GitHub org/user name.
+  projectName: 'panduan-si', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -42,15 +43,22 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/wijayakarya/panduan-si/edit/main/',
+          routeBasePath: '/', // Serve the docs at the site's root, rename index.js to index_disabled.js in src/pages
+          sidebarCollapsed: false, // Whether sidebar categories are collapsed by default
+          showLastUpdateAuthor: true, // Whether to display the author who last updated the doc
+          showLastUpdateTime: true, // Whether to display the last date the doc was updated
         },
+        blog: false, // Optional: disable the blog plugin
+        /*
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/wijayakarya/panduan-si/edit/main/',
         },
+        */
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -63,8 +71,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      docs: {
+        sidebar: {
+          hideable: true, // Make the entire sidebar hideable
+        },
+      },
       navbar: {
-        title: 'My Site',
+        title: 'panduan',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -76,9 +89,9 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/wijayakarya/panduan-si',
             label: 'GitHub',
             position: 'right',
           },
@@ -88,46 +101,52 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Dokumentasi',
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Media Sosial',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Instagram',
+                href: 'https://instagram.com/ptwijayakarya',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Facebook',
+                href: 'https://facebook.com/ptwika',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/PTWijayaKarya',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Lainnya',
             items: [
+              /*
               {
                 label: 'Blog',
                 to: '/blog',
               },
+              */
+              {
+                label: 'Helpdesk',
+                href: 'https://sla.wika.co.id',
+              },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/wijayakarya/panduan-si',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Sistem Informasi. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
